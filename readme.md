@@ -21,7 +21,11 @@ To this:
 {"NAME":"My Blue","MYNEWTHING":"stuff goes here",HTML":"#3598CB"}
 ```
 
-Then in main.js after this line: '<div class="element">' where it's relevant add this kind of line:
+Then in main.js after this line:
+```
+'<div class="element">'
+```
+where it's relevant add this kind of line:
 ```
 + '<div>'+elementData.MYNEWTHING+'</div>'
 ```
