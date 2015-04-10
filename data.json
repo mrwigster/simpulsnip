@@ -1,0 +1,41 @@
+[
+{
+
+
+
+
+
+  "COMMENTS" :"This is the data storage for snippr - manually add your items into relevant groups. Main annoying thing is having to add backslash before any double quote in links etc to escape it, otherise it will be invalid JSON.",
+
+  "BY": "Alex Wigmore - @MrWigster http://alex-wigmore.co.uk/snipit",
+
+  "EXAMPLES" :"The below are just examples, change the ELEMENT_TYPE to a name that's relevant for the group of items. Then create items with parameters: NAME, SRC (Optional) [this is for showing images] and HTML [this will be the actual HTML that appears in textarea ready for copying to clipboard.] DELETE this line up to and including \"COMMENTS\" if you wish",
+
+
+
+
+
+
+
+  "ELEMENT_TYPE":"Common Images",
+  "ELEMENTS":[
+    {"NAME":"TrulyCode:","SRC":"http://trulycode.com/wp-content/themes/trulycode/images/trulycode_logo.png","HTML":"http://trulycode.com/wp-content/themes/trulycode/images/trulycode_logo.png"},
+    {"NAME":"Alex Wigmore:","SRC":"http://alex-wigmore.co.uk/img/alex-wigmore-logo.png","HTML":"http://alex-wigmore.co.uk/img/alex-wigmore-logo.png"}
+  ]
+},
+{
+  "ELEMENT_TYPE":"Useful Stuff",
+  "ELEMENTS":[
+    {"NAME":"Facebook Link","HTML":"<a href=\"https://facebook.com/mrwigster\">@MrWigster</a>"},
+    {"NAME":"Twitter Link","HTML":"<a href=\"https://twitter.com/mrwigster\">@MrWigster</a>"},
+    {"NAME":"My Green","HTML":"#48B691"},
+    {"NAME":"My Blue","HTML":"#3598CB"}
+  ]
+},
+{
+  "ELEMENT_TYPE":"Common Example",
+  "ELEMENTS":[
+    {"NAME":"Our Signature Link","HTML":"<a href=\"http://yourlinkhere.com\"><img src=\"http://domain.com/signature.jpg\"></a>"}
+  ]
+}
+]

@@ -1,0 +1,204 @@
+/*!
+CSS file of simpulsnip for loading in snipp-able elements and copy pasting of their relevant code
+I was going to use SASS For this file, but it's a little too simple to warrant the extra potential intracy for some users
+
+By Alex Wigmore
+@MrWigster
+http://alex-wigmore.co.uk/simpulsnip
+*/
+
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+/* Normalize ends */
+
+/* Begin simpulsnip styling */
+body {
+  background: linear-gradient(270deg, #3598cb, #48b691);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+a {
+  color: #48B691;
+}
+
+a:hover {
+  color: #3598CB;
+}
+
+.wrap {
+  width: 800px;
+  margin: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .wrap {
+    width: 96%;
+    padding: 0 2%;
+  }
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.quart, .third, .threequart, .half {
+  float: left;
+  margin: 0 1%;
+}
+
+.quart {
+  width: 23%;
+}
+
+.third {
+  width: 31%;
+}
+
+.threequart {
+  width: 73%;
+}
+
+.half {
+  width: 48%;
+}
+
+img {
+  max-width: 100%;
+}
+h1.simpulsnip-brand {
+  font-size: 4em;
+  color: #FFF;
+  font-family: 'PT Sans', helvetica, arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  margin-bottom: -0.4em;
+  text-shadow: 0px 3px 0px #42ACA4;
+}
+
+
+h3 {
+  font-size: 2em;
+  transform: rotate(-4deg);
+  padding: 1em 0;
+  color: #FFF;
+}
+
+.element {
+  position: relative;
+  padding: 20px;
+  background: #F4F4F4;
+  border-radius: 5px;
+  border-bottom: 3px solid #E4E4E4;
+  margin: 1em 0;
+}
+
+textarea {
+  border: 0;
+  vertical-align: middle;
+  font-size: 20px;
+  width: 100%;
+  background: none;
+  cursor: pointer;
+}
+.hover-hint {
+  background: #48B691;
+  border-radius: 1px;
+  font-size: 0.5em;
+  padding: 1em;
+  display: inline-block;
+  color: white;
+}
+/* Tooltip text that appears on textarea hover */
+/* Tooltip thanks to this pen: http://codepen.io/rudeworks/pen/yrgfu */
+textarea + .tooltip {
+  background: #3598CB;
+  bottom: 100%;
+  color: #fff;
+  display: block;
+  left: -20px;
+  margin-bottom: 15px;
+  opacity: 0;
+  padding: 20px;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  -ms-transition: all .25s ease-out;
+  -o-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+textarea + .tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+textarea + .tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #3598CB 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}
+
+textarea:hover + .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+.footer {
+  text-align: center;
+  padding: 1em 0;
+  color: #ECECEC;
+  background: #282828;
+  border-top: 2px solid #575757;
+  margin-top: 2em;
+}
